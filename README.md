@@ -18,7 +18,7 @@ Gympass style app.
 
 ## Rn
 
-- [ ] The user can't register with a duplicate e-mail;
+- [x] The user can't register with a duplicate e-mail;
 - [ ] The user can't make two check-ins in the same day;
 - [ ] The user can't check-in if their not close to the gym (100m);
 - [ ] The check-in can only be validate 20 minutes after their creation;
@@ -27,6 +27,6 @@ Gympass style app.
 
 ## RNFs
 
-- [ ] The user password needs to be hashed;
-- [ ] The application's data needs to be stored in a PostgreeSQl database;
+- [x] The user password needs to be hashed;
+- [x] The application's data needs to be stored in a PostgreeSQl database;
 - [ ] The user needs to be identified by a JWT (JSON Web Token);

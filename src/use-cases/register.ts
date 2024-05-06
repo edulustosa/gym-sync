@@ -8,7 +8,7 @@ interface RegisterServiceRequest {
   password: string
 }
 
-export class RegisterService {
+export class RegisterUseCase {
   private usersRepository: UsersRepository
 
   constructor(usersRepository: UsersRepository) {
