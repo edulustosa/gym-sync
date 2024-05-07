@@ -32,8 +32,8 @@ describe('Get user profile use case', () => {
       password_hash: await hash('12345678', 6),
     })
 
-    expect(() => sut.execute({ userId: 'wrong id' })).rejects.toBeInstanceOf(
-      ResourceNotFoundError,
-    )
+    await expect(() =>
+      sut.execute({ userId: 'wrong id' }),
+    ).rejects.toBeInstanceOf(ResourceNotFoundError)
   })
 })
