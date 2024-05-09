@@ -8,8 +8,8 @@ let checkInsRepository: InMemoryCheckInsRepository
 let gymsRepository: InMemoryGymsRepository
 let sut: CheckInUseCase
 
-const userLatitude = -16.0711898
-const userLongitude = -47.9834084
+const userLatitude = -16.072455
+const userLongitude = -47.972195
 
 describe('Check ins use-case', () => {
   beforeEach(() => {
@@ -22,8 +22,8 @@ describe('Check ins use-case', () => {
       title: 'JS gym',
       phone: '',
       description: 'any',
-      latitude: new Decimal(0),
-      longitude: new Decimal(0),
+      latitude: new Decimal(userLatitude),
+      longitude: new Decimal(userLongitude),
     })
 
     vi.useFakeTimers()
@@ -87,17 +87,17 @@ describe('Check ins use-case', () => {
 
   it('should not be able to check in on distant gym', async () => {
     gymsRepository.items.push({
-      id: 'gym-01',
+      id: 'gym-02',
       title: 'JS gym',
       phone: '',
       description: 'any',
-      latitude: new Decimal(-16.059099),
-      longitude: new Decimal(-48.0396044),
+      latitude: new Decimal(-16.0751205),
+      longitude: new Decimal(-47.9761378),
     })
 
-    expect(() =>
+    await expect(() =>
       sut.execute({
-        gymId: 'gym-01',
+        gymId: 'gym-02',
         userId: 'user-01',
         userLatitude,
         userLongitude,
