@@ -7,11 +7,11 @@ Gympass style app.
 - [x] It should be possible to register;
 - [x] It should be possible to authenticate;
 - [x] It should be possible to get a profile of a logged user;
-- [ ] It should be possible to get the number of check-ins made by the user;
-- [ ] It should be possible for the user to get their check-in history;
+- [x] It should be possible to get the number of check-ins made by the user;
+- [x] It should be possible for the user to get their check-in history;
 - [ ] It should be possible for the user to search nearby gyms;
-- [ ] It should be possible for the user to search gyms by the name;
-- [ ] It should be possible for the user to check-in to a gym;
+- [x] It should be possible for the user to search gyms by the name;
+- [x] It should be possible for the user to check-in to a gym;
 - [x] It should be possible to validate a check-in of a user;
 - [ ] It should be possible to validate a check-in of a user;
 - [x] It should be possible to register a gym;
