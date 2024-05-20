@@ -14,7 +14,6 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
   const gymData = createBodySchema.parse(request.body)
 
   const createGym = makeCreateGymUseCase()
-
   const gym = await createGym.execute(gymData)
 
   return reply.status(201).send({ gym })
