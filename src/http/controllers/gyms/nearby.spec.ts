@@ -52,7 +52,7 @@ describe('Nearby gyms (e2e)', () => {
 
     expect(nearbyGymsResponse.body.gyms).toEqual([
       expect.objectContaining({
-        title: 'JS Gym',
+        title: 'nearby gym',
       }),
     ])
   })
