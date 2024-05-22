@@ -1,0 +1,17 @@
+name: Run Unit Tests
+
+on: [push] # Action starts with those git commands
+
+jobs: # Action
+  run-unit-tests: # Name of the action
+    name: Run Unit Tests
+    runs-on: ubuntu-latest # Machine to run the action
+
+    steps:
+      - uses: actions/checkout@v4 # Downloads the code
+      - uses: actions/setup-node@v4 # Install node
+        with:
+          node-version: 20
+          cache: 'npm' # Creates a cache of the dependencies, if the dependencies doesn't change on a rerun it uses the cache
+      - run: npm ci # Install dependencies without make any change on them
+      - run: npm test
