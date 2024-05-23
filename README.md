@@ -1,32 +1,60 @@
 # GymSync
 
-Gympass style app.
+GymSync is an API designed to facilitate interaction between users and gyms, providing an integrated and efficient experience for check-ins and fitness activity management.
 
-## RFs
+## Prerequisites
 
-- [x] It should be possible to register;
-- [x] It should be possible to authenticate;
-- [x] It should be possible to get a profile of a logged user;
-- [x] It should be possible to get the number of check-ins made by the user;
-- [x] It should be possible for the user to get their check-in history;
-- [ ] It should be possible for the user to search nearby gyms;
-- [x] It should be possible for the user to search gyms by the name;
-- [x] It should be possible for the user to check-in to a gym;
-- [x] It should be possible to validate a check-in of a user;
-- [ ] It should be possible to validate a check-in of a user;
-- [x] It should be possible to register a gym;
+- Latest version of Node.js and npm.
+- Docker 🐳
 
-## Rn
+You can install Node and npm [here](https://nodejs.org/en/download/package-manager). \
+You can install Docker [here](https://docs.docker.com/get-docker/).
 
-- [x] The user can't register with a duplicate e-mail;
-- [x] The user can't make two check-ins in the same day;
-- [x] The user can't check-in if their not close to the gym (100m);
-- [ ] The check-in can only be validate 20 minutes after their creation;
-- [ ] The check-in can only be validate by admins;
-- [ ] The gym can only be register by admins;
+## Installation
 
-## RNFs
+1. Clone the repository:
 
-- [x] The user password needs to be hashed;
-- [x] The application's data needs to be stored in a PostgreeSQl database;
-- [ ] The user needs to be identified by a JWT (JSON Web Token);
+    ```bash
+    git clone https://github.com/edulustosa/gym-sync.git
+    ```
+
+2. Install the dependencies:
+
+    ```bash
+    cd gym-sync
+    npm install
+    ```
+
+3. Configure the environment variables:
+
+    Rename the file `.env.example` to `.env` and update the environment variables as necessary.
+
+4. Start the database with Docker:
+
+    ```bash
+    sudo docker compose up -d
+    ```
+
+5. Run migrations:
+
+    ```bash
+    npx prisma migrate dev
+    ```
+
+6. Start the server:
+
+    ```bash
+    npm run dev
+    ```
+
+## 📫 Contributing to GymSync
+
+To contribute to GymSync, follow these steps:
+
+1. Fork this repository.
+2. Create a branch: `git checkout -b <branch_name>`.
+3. Make your changes and commit them: `git commit -m '<commit_message>'`.
+4. Push to your branch: `git push origin <branch_name>`.
+5. Create a pull request.
+
+Alternatively, refer to the GitHub documentation on [how to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
